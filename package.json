@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "Stencil Starter App",
+  "main": "server.js",
   "files": [
     "dist"
   ],
@@ -10,15 +11,19 @@
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "ssr:dev": "concurrently \"nodemon\" \"stencil build --dev --watch\""
   },
   "dependencies": {
     "@stencil/core": "next",
-    "@stencil/router": "0.0.4"
+    "@stencil/router": "0.0.4",
+    "express": "^4.15.4"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest"
+    "@stencil/utils": "latest",
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
   "repository": {
     "type": "git",

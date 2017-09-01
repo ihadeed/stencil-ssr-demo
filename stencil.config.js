@@ -1,6 +1,6 @@
 exports.config = {
   bundles: [
-    { components: ['my-name'] }
+    { components: ['my-app', 'home-page', 'demo-page'] }
   ],
   collections: [
     { name: '@stencil/router' }
@@ -10,4 +10,4 @@ exports.config = {
 exports.devServer = {
   root: 'www',
   watchGlob: '**/**'
-}
+};
